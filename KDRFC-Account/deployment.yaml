@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kdrfc-account
+spec:
+  selector:
+    matchLabels:
+      app: account-server
+  template:
+    metadata:
+      labels:
+        app: account-server
+    spec:
+      containers:
+        - name: account-server
+          image: kangdroid.azurecr.io/account:d85e6d6
+          resources: {}
+          ports:
+            - containerPort: 80
+          env:
+            - name: Mongo__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-cluster-admin-admin
+                  key: connectionString.standard
+            - name: Mongo__DatabaseName
+              value: Accounts
