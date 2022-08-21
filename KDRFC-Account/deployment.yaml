@@ -11,6 +11,8 @@ spec:
       labels:
         app: account-server
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: account-server
           image: kangdroid.azurecr.io/account:e67b117
