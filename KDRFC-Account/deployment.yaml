@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: kdrfc-account
 spec:
-  replicas: 5
   selector:
     matchLabels:
       app: account-server
