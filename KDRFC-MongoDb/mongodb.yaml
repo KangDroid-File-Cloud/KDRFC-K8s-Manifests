@@ -25,25 +25,6 @@ spec:
       scramCredentialsSecretName: mongodb-0
   additionalMongodConfig:
     storage.wiredTiger.engineConfig.journalCompressor: zlib
-  statefulSet:
-    spec:
-      volumeClaimTemplates:
-        - metadata:
-            name: data-volume
-          spec:
-            accessModes: ["ReadWriteOnce"]
-            storageClassName: openebs-hostpath
-            resources:
-              requests:
-                storage: 10G
-        - metadata:
-            name: logs-volume
-          spec:
-            accessModes: ["ReadWriteOnce"]
-            storageClassName: openebs-hostpath
-            resources:
-              requests:
-                storage: 1G
 ---
 apiVersion: v1
 kind: Secret
