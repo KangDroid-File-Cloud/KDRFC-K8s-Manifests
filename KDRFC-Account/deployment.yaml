@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: account-server
-          image: kangdroid.azurecr.io/account:d85e6d6
+          image: kangdroid.azurecr.io/account:e67b117
           resources: {}
           ports:
             - containerPort: 80
