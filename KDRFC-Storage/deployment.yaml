@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kdrfc-storage
+spec:
+  selector:
+    matchLabels:
+      app: storage-server
+  template:
+    metadata:
+      labels:
+        app: storage-server
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: storage-server
+          image: kangdroid.azurecr.io/storage:9546b2d
+          resources: {}
+          ports:
+            - containerPort: 80
+          env:
+            - name: Mongo__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: kdrfc-database-admin-admin
+                  key: connectionString.standard
+            - name: Mongo__DatabaseName
+              value: Storage
