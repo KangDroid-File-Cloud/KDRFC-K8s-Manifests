@@ -13,7 +13,7 @@ spec:
             prefix: /api/accounts
       route:
         - destination:
-            host: kdrfc-account-service
+            host: kdrfc-account
             port:
               number: 8081
     - match:
