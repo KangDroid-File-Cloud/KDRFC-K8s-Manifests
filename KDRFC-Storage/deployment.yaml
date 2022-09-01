@@ -15,7 +15,7 @@ spec:
         - name: regcred
       containers:
         - name: storage-server
-          image: kangdroid.azurecr.io/storage:9546b2d
+          image: kangdroid.azurecr.io/storage:e6f9963
           resources: {}
           ports:
             - containerPort: 80
@@ -27,3 +27,5 @@ spec:
                   key: connectionString.standard
             - name: Mongo__DatabaseName
               value: Storage
+            - name: ASPNETCORE_ENVIRONMENT
+              value: ContainerTest
