@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kdrfc-storage
+  namespace: argocd
+spec:
+  destination:
+    namespace: kdrfc
+    server: https://kubernetes.default.svc
+  project: kdrfc
+  source:
+    path: KDRFC-Storage
+    repoURL: https://github.com/KangDroid-File-Cloud/KDRFC-K8s-Manifests.git
+    targetRevision: test-server
