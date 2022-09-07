@@ -19,3 +19,12 @@ spec:
     - name: "*"
       namespace: "*"
       server: "*"
+
+  # Required Whitelist
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
