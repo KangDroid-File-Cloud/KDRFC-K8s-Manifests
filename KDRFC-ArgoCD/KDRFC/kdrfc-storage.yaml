@@ -11,4 +11,4 @@ spec:
   source:
     path: KDRFC-Storage
     repoURL: https://github.com/KangDroid-File-Cloud/KDRFC-K8s-Manifests.git
-    targetRevision: test-server
+    targetRevision: main

@@ -11,7 +11,7 @@ spec:
   source:
     path: KDRFC-MongoDb
     repoURL: https://github.com/KangDroid-File-Cloud/KDRFC-K8s-Manifests.git
-    targetRevision: test-server
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
