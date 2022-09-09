@@ -15,7 +15,7 @@ spec:
         - name: regcred
       containers:
         - name: storage-server
-          image: kangdroid.azurecr.io/storage:e6f9963
+          image: kangdroid.azurecr.io/storage:b297e27
           resources: {}
           ports:
             - containerPort: 80
