@@ -17,6 +17,12 @@ spec:
         - name: account-server
           image: kangdroid.azurecr.io/account:3a73297
           resources: {}
+          readinessProbe:
+            initialDelaySeconds: 10
+            periodSeconds: 15
+            httpGet:
+              path: "/health"
+              port: 80
           ports:
             - containerPort: 80
           env:
