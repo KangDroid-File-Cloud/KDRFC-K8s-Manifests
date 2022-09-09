@@ -17,6 +17,12 @@ spec:
         - name: storage-server
           image: kangdroid.azurecr.io/storage:44f614d
           resources: {}
+          readinessProbe:
+            initialDelaySeconds: 10
+            periodSeconds: 15
+            httpGet:
+              path: "/health"
+              port: 80
           ports:
             - containerPort: 80
           env:
