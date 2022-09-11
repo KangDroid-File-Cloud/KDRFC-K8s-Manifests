@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kdrfc-rabbitmq
+  namespace: argocd
+spec:
+  destination:
+    namespace: kdrfc
+    server: https://kubernetes.default.svc
+  project: kdrfc
+  source:
+    path: KDRFC-RabbitMQ
+    repoURL: https://github.com/KangDroid-File-Cloud/KDRFC-K8s-Manifests.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
