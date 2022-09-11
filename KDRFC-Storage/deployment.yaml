@@ -35,3 +35,20 @@ spec:
               value: Storage
             - name: ASPNETCORE_ENVIRONMENT
               value: ContainerTest
+            - name: RabbitMq__Host
+              valueFrom:
+                secretKeyRef:
+                  name: kdrfc-rabbitmq-default-user
+                  key: host
+            - name: RabbitMq__VirtualHost
+              value: "/"
+            - name: RabbitMq__UserName
+              valueFrom:
+                secretKeyRef:
+                  name: kdrfc-rabbitmq-default-user
+                  key: username
+            - name: RabbitMq__Password
+              valueFrom:
+                secretKeyRef:
+                  name: kdrfc-rabbitmq-default-user
+                  key: password
