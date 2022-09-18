@@ -15,7 +15,7 @@ spec:
         - name: regcred
       containers:
         - name: account-server
-          image: kangdroid.azurecr.io/account:e155203
+          image: kangdroid.azurecr.io/account:dfb3608
           resources: {}
           readinessProbe:
             initialDelaySeconds: 10
