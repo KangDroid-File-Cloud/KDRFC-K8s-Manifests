@@ -15,7 +15,7 @@ spec:
         - name: regcred
       containers:
         - name: storage-server
-          image: kangdroid.azurecr.io/storage:a6badaa
+          image: kangdroid.azurecr.io/storage:d3db57a
           resources: {}
           readinessProbe:
             initialDelaySeconds: 10
